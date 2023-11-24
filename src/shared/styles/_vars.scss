@@ -1,0 +1,29 @@
+$bg: #F3F7FA;
+$white: #FFFFFF;
+$mainText: #4A4A4A;
+$blue: #2196F3;
+$gray: #A0B0B9;
+
+$small: 'small';
+$mobile: 'mobile';
+$tablet: 'tablet';
+$desktop: 'desktop';
+$large: 'large';
+
+$breakpoints: (
+	small: (
+		max-width: 320px,
+	),
+	mobile: (
+		max-width: 560px,
+	),
+	tablet: (
+		max-width: 768px,
+	),
+	desktop: (
+		max-width: 1024px,
+	),
+	large: (
+		max-width: 1200px,
+	),
+);

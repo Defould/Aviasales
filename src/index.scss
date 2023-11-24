@@ -1,0 +1,18 @@
+@import './shared/styles/_vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: 600;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: $bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
