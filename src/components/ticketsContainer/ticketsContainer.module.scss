@@ -1,0 +1,11 @@
+@import '../../shared/styles/_vars.scss';
+
+.tickets_container {
+    min-width: 505px;
+    @include respond-to($desktop) {
+		min-width: 440px;
+	}
+    @include respond-to($mobile) {
+		min-width: 310px;
+	}
+}

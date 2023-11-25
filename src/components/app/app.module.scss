@@ -1,8 +1,15 @@
 @import '../../shared/styles/_vars.scss';
 
 .app {
-  width: 960px;
-  height: 1350px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 50px 100px;
+  padding: 45px 100px;
+  @include respond-to($desktop) {
+		max-width: 768px;
+    padding: 30px 50px;
+	}
+  @include respond-to($mobile) {
+    padding: 0 5px;
+	}
 }
+

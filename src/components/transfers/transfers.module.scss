@@ -1,9 +1,68 @@
 @import '../../shared/styles/vars.scss';
 
-.container {
-    width: 230px;
-    height: 250px;
+.transfers_container {
+    min-width: 230px;
+    max-height: 255px;
+    padding: 20px 0;
     border-radius: 5px;
     background-color: $white;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
+    @include respond-to($desktop) {
+		min-width: 200px;
+	}
+}
+
+.transfers_title {
+    margin: 0 0 10px 20px;
+    color: $mainText;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.transfers_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.transfers_item {
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    height: 40px;
+    list-style-type: none;
+    color: $mainText;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+    &:hover {
+        background: $lightBlue;        
+    }
+}
+
+.label {
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+
+.input_check {
+    position: absolute;
+    appearance: none;
+}
+
+.custom_check {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../shared/assets/img/Checkbox.svg);
+    left: -30px;
+    cursor: pointer;
+}
+
+.input_check:checked + .custom_check {
+    background-image: url(../../shared/assets/img/Checkbox_checked.svg);
 }

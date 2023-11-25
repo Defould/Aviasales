@@ -1,7 +1,12 @@
+@import '../../shared/styles/_vars.scss';
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px repeat(auto-fill, 185px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 30px;  
+  @include respond-to($tablet) {
+		flex-direction: column;
+	}
 }

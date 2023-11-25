@@ -6,21 +6,24 @@ const Filters = ({ filter, onFilterSelect }) => {
     { name: 'fastest', label: 'Самый быстрый' },
     { name: 'optimal', label: 'Оптимальный' },
   ];
+  console.log(filter);
 
-  const btns = buttonsData.map(({ name, label }) => {
+  const btns = buttonsData.map(({ name, label }, index) => {
     const active = filter === name;
-    const clazz = active ? 'selected' : '';
+    const clazz = active ? styles.selected : '';
+    const isFirst = index === 0;
+    const isLast = index === buttonsData.length - 1;
 
     return (
-      <li key={name}>
-        <button className={clazz} onClick={() => onFilterSelect(name)}>
+      <li className={`${styles.filter_item} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''}`} key={name}>
+        <button className={`${styles.filter_btn} ${clazz}`} onClick={() => onFilterSelect(name)}>
           {label}
         </button>
       </li>
     );
   });
 
-  return <u className={styles.filters}>{btns}</u>;
+  return <ul className={styles.filters}>{btns}</ul>;
 };
 
 export default Filters;
