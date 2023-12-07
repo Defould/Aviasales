@@ -36,7 +36,7 @@ const TicketItem = () => {
           </div>
           <div className={styles.card_block}>
             <div className={styles.card_block__title}>1 пересадка</div>
-            <div className={styles.card_block__info}>HKG</div>
+            <div className={styles.card_block__info}>HKG, JNB</div>
           </div>
         </div>
       </div>

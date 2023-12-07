@@ -3,7 +3,7 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true
 	},
-	"cSpell.words": [
-		"Aviasales"
-	]
+	"cSpell.ignoreWords": [
+		"loder"
+	],
 }

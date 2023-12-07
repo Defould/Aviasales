@@ -1,3 +1,4 @@
+import Loader from '../loader/loader';
 import TicketItem from '../ticketItem/ticketItem';
 
 import styles from './ticketList.module.scss';
@@ -8,6 +9,7 @@ const TicketList = () => {
       <TicketItem />
       <TicketItem />
       <TicketItem />
+      <Loader />
     </ul>
   );
 };
