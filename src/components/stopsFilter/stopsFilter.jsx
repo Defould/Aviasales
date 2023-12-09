@@ -10,8 +10,8 @@ const StopsFilter = () => {
 
   const stopsLabels = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки'];
 
-  const handleChange = (arg) => {
-    dispatch(updateStopsFilter(arg));
+  const handleChange = (key) => {
+    dispatch(updateStopsFilter(key));
   };
 
   const stops = stopsLabels.map((label, index) => {

@@ -1,9 +1,16 @@
-import { createStore, combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 
 import sortReducer from '../reducers/sortReducer';
 import stopsFilterReducer from '../reducers/stopsFilterReducer';
-import ticketReducer from '../reducers/ticketReducer';
+import fetchDataReducer from '../reducers/fetchDataReducer';
 
-const store = createStore(combineReducers({ fetchData: ticketReducer, sort: sortReducer, stops: stopsFilterReducer }));
+const store = configureStore({
+  reducer: { fetchData: fetchDataReducer, sort: sortReducer, stops: stopsFilterReducer },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      immutableCheck: false,
+      serializableCheck: false,
+    }),
+});
 
 export default store;

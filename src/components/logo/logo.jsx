@@ -1,6 +1,6 @@
 import logo from '../../shared/assets/img/Logo.png';
 
-import styles from './styles.module.scss';
+import styles from './logo.module.scss';
 
 const Logo = () => {
   return <img className={styles.logo} src={logo} alt="logo" />;

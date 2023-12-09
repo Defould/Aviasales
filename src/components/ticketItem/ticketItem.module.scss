@@ -8,6 +8,9 @@
     padding: 20px;
     border-radius: 5px;
     filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.10));
+    @include respond-to($mobile) {
+        padding: 10px;
+    }
 }
 
 .card_header {
@@ -15,12 +18,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
-
-.price {
-    font-size: 24px;
-    line-height: 24px;
-    color: $blue;
+    &__price {
+        font-size: 24px;
+        line-height: 24px;
+        color: $blue;
+    }
 }
 
 .card_row {
@@ -32,6 +34,10 @@
 }
 
 .card_block {
+    min-width: 105px;
+    @include respond-to($mobile) {
+        min-width: 100px;
+    }
     &__title {
         font-size: 12px;
         line-height: 18px;
