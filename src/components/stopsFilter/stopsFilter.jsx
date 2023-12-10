@@ -18,25 +18,23 @@ const StopsFilter = () => {
     const transferKey = index === 0 ? 'all' : `${index - 1}`;
 
     return (
-      <li key={label} className={styles.transfers_item}>
-        <label className={styles.label}>
-          <input
-            className={styles.input_check}
-            type="checkbox"
-            checked={stopsData[transferKey] || (index === 0 && stopsData['all'])}
-            onChange={() => handleChange(transferKey)}
-          />
-          <span className={styles.custom_check}></span>
-          {label}
-        </label>
-      </li>
+      <label key={label} className={styles.label}>
+        <input
+          className={styles.input_check}
+          type="checkbox"
+          checked={stopsData[transferKey] || (index === 0 && stopsData['all'])}
+          onChange={() => handleChange(transferKey)}
+        />
+        <span className={styles.custom_check}></span>
+        <span className={styles.label_text}>{label}</span>
+      </label>
     );
   });
 
   return (
     <div className={styles.transfers_container}>
       <div className={styles.transfers_title}>Количество пересадок</div>
-      <ul className={styles.transfers_list}>{stops}</ul>
+      <div className={styles.transfers_list}>{stops}</div>
     </div>
   );
 };

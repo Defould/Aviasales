@@ -27,24 +27,17 @@
     padding: 0;
 }
 
-.transfers_item {
-    margin: 0;
-    padding: 10px 20px;
+.label {
+    position: relative;
+    padding-left: 30px;
     width: 100%;
     height: 40px;
     list-style-type: none;
     color: $mainText;
-    font-size: 13px;
-    line-height: 20px;
+    cursor: pointer;
     &:hover {
         background: $lightBlue;        
     }
-}
-
-.label {
-    position: relative;
-    margin-left: 30px;
-    cursor: pointer;
 }
 
 
@@ -58,10 +51,18 @@
     width: 20px;
     height: 20px;
     background-image: url(../../shared/assets/img/Checkbox.svg);
-    left: -30px;
+    left: 20px;
+    top: 10px;
     cursor: pointer;
 }
 
 .input_check:checked + .custom_check {
     background-image: url(../../shared/assets/img/Checkbox_checked.svg);
+}
+
+.label_text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 20px;
 }

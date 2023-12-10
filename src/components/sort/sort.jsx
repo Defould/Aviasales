@@ -24,13 +24,19 @@ const Sort = () => {
     const isLast = index === sortData.length - 1;
 
     return (
-      <li
+      <label
         className={`${styles.filter_item} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''} ${clazz}`}
-        onClick={() => sortHandler(name)}
         key={name}
       >
+        <input
+          className={styles.filter_item__input}
+          type="radio"
+          name="sortRadio" // Добавляем одинаковое имя для группы радиокнопок
+          checked={activeSort === name}
+          onChange={() => sortHandler(name)}
+        />
         {label}
-      </li>
+      </label>
     );
   });
 
@@ -38,3 +44,5 @@ const Sort = () => {
 };
 
 export default Sort;
+
+//`${styles.filter_item} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''} ${clazz}`
