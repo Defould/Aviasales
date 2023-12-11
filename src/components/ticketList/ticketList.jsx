@@ -1,12 +1,13 @@
-import { nanoid } from '@reduxjs/toolkit';
 
 import TicketItem from '../ticketItem/ticketItem';
 
 import styles from './ticketList.module.scss';
 
 const TicketList = ({ ticketsData }) => {
-  const tickets = ticketsData.map((props) => (
-    <li key={nanoid()} className={styles.ticket_list__item}>
+  const id = 0;
+
+  const tickets = ticketsData.map((props, i) => (
+    <li key={id++} className={styles.ticket_list__item}>
       <TicketItem {...props} />
     </li>
   ));
