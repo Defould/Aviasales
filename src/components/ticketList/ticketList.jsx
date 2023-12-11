@@ -5,7 +5,7 @@ import styles from './ticketList.module.scss';
 const TicketList = ({ ticketsData }) => {
   let id = 0;
 
-  const tickets = ticketsData.map((props, i) => (
+  const tickets = ticketsData.map((props) => (
     <li key={id++} className={styles.ticket_list__item}>
       <TicketItem {...props} />
     </li>
