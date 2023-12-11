@@ -1,10 +1,9 @@
-
 import TicketItem from '../ticketItem/ticketItem';
 
 import styles from './ticketList.module.scss';
 
 const TicketList = ({ ticketsData }) => {
-  const id = 0;
+  let id = 0;
 
   const tickets = ticketsData.map((props, i) => (
     <li key={id++} className={styles.ticket_list__item}>
